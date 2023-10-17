@@ -1,0 +1,26 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+body{
+    font-size: 1.8rem;
+}
+.login-box{
+    margin: 30px;
+    width: 400px;
+    height: 300px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.text{
+    margin: 10px 0;
+}
+.body-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-login{
+    height: 100%;
+}
