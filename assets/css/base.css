@@ -5,6 +5,7 @@
 }
 html{
     font-size: 62.5%;
+    white-space: nowrap;
 }
 .box-top{
     padding: 0;
@@ -15,7 +16,6 @@ html{
     width: 100%;
     background-color: rgb(241, 181, 96);
     height: 50px;
-   
 }
 
 .box-top-list{
@@ -50,4 +50,23 @@ h1{
 }
 .text-header{
     padding-left: 10px;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+.button{
+    padding: 12px; 
+    border: none;  
+    border-radius: 15px;
+    background-color: rgb(14, 114, 79);
+    color: white;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    white-space: nowrap;
+}
+
+.button-secondary{
+    background-color: rgb(167, 32, 32);
 }
