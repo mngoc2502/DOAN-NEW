@@ -1,26 +1,50 @@
 .container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
 }
 body{
     font-size: 1.8rem;
 }
+
 .login-box{
-    margin: 30px;
-    width: 400px;
-    height: 300px;
+    border-radius: 20px;
+    padding: 48px 84px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.text{
-    margin: 10px 0;
+.header-login{
+    padding: 30px 0;
 }
+
 .body-login{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .form-login{
-    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
+
+.input-box{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(168, 149, 149, 0.8);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.login-btn{
+    margin: 20px 0px;
+    text-transform: uppercase;
+}
+
+.forgot-pwd{
+    margin: 10px 0;
+    font-style: italic;
+    color: #000;
+}
+
+
+
