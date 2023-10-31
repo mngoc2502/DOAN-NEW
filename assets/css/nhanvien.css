@@ -1,3 +1,50 @@
 body{
     font-size: 1.8rem;
 }
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-item-center {
+    align-items: center;
+}
+
+.p-2 {
+    padding: 0 1.25rem;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 60px;
+    background-color: rgb(241, 181, 96);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.list-item-link {
+    padding: 20px 20px;
+}
+
+.list-item-link:hover {
+    background: rgb(236, 229, 219);
+}
+
+.title-page {
+    padding-top: 30px;
+}

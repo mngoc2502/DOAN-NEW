@@ -6,6 +6,11 @@
         <title>Đăng nhập</title>
         <link rel="stylesheet" href="./assets/css/style.css" />
         <link rel="stylesheet" href="./assets/css/base.css" />
+        <link
+            rel="shortcut icon"
+            href="./assets/img/micro-favicon.png"
+            type="image/x-icon"
+        />
     </head>
     <body>
         <div class="container">
@@ -40,10 +45,10 @@
         </div>
     </body>
     <script>
-        const showPassword = document.querySelector('.pwd-show');
-        const passwordInput = document.querySelector('.password-input');
+        const showPassword = document.querySelector(".pwd-show");
+        const passwordInput = document.querySelector(".password-input");
 
-        showPassword.addEventListener("change", function() {
+        showPassword.addEventListener("change", function () {
             if (showPassword.checked) {
                 passwordInput.type = "text";
             } else {
