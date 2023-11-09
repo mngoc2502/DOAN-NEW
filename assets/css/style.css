@@ -4,12 +4,14 @@
     max-width: 100vw;
     min-height: 100vh;
     background-image: url('../img/background.jpg');
+    background-size: cover;
 }
 body{
     font-size: 1.8rem;
 }
 
 .login-box{
+    background-color: white;
     border-radius: 20px;
     padding: 48px 84px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

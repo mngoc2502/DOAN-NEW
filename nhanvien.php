@@ -21,6 +21,15 @@
         />
     </head>
     <body>
+        <?php
+            session_start();
+
+            if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+                echo "<script>alert('Bạn phải đăng nhập trước khi vào hệ thống!','Lỗi chưa đăng nhập!!!!');</script>";
+                echo "<script>window.location = 'index.html';</script>";
+                exit();
+            }
+        ?>
         <header>
             <div class="navbar">
                 <ul class="nav-list">

@@ -25,7 +25,8 @@
             session_start();
 
             if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-                header("Location: index.html");
+                echo "<script>alert('Bạn phải đăng nhập trước khi vào hệ thống!','Lỗi chưa đăng nhập!!!!');</script>";
+                echo "<script>window.location = 'index.html';</script>";
                 exit();
             }
         ?>
