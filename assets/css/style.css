@@ -1,7 +1,9 @@
 .container{
     display: grid;
     place-items: center;
+    max-width: 100vw;
     min-height: 100vh;
+    background-image: url('../img/background.jpg');
 }
 body{
     font-size: 1.8rem;

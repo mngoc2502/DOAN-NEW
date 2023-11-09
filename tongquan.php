@@ -18,6 +18,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        
     </head>
     <body>
         <header>
@@ -66,7 +67,7 @@
                             <h5 class="text-header">phòng hát</h5>
                         </div>
                         <div class="body-room-left">
-                            <div class="room-card card-active">
+                            <div class="room-card card-disabled">
                                 <div class="price">
                                     <img
                                         src="./assets/img/micro.png"
@@ -85,12 +86,15 @@
                                     <button class="button btn-purchase">
                                         Thanh toán
                                     </button>
-                                    <button class="button btn-start">
+                                    <button
+                                        onclick="handle_start(this)"
+                                        class="button btn-start">
                                         Bắt đầu
                                     </button>
                                 </div>
                                 <div class="room-cancel">
                                     <button
+                                        onclick="handle_cancle(this)"
                                         class="button button-secondary btn-cancel"
                                     >
                                         Hủy phòng
@@ -116,44 +120,15 @@
                                     <button class="button btn-purchase">
                                         Thanh toán
                                     </button>
-                                    <button class="button btn-start">
+                                    <button 
+                                        onclick="handle_start(this)"
+                                        class="button btn-start">
                                         Bắt đầu
                                     </button>
                                 </div>
                                 <div class="room-cancel">
                                     <button
-                                        class="button button-secondary btn-cancel"
-                                    >
-                                        Hủy phòng
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="room-card card-disabled">
-                                <div class="price">
-                                    <img
-                                        src="./assets/img/micro.png"
-                                        alt=""
-                                        width="100px"
-                                    />
-                                    <p class="text-bold">Giá: 50.000đ/h</p>
-                                </div>
-                                <div class="room-state">
-                                    <h3 class="customer-false">
-                                        Chưa có khách
-                                    </h3>
-                                    <h3 class="customer-true">
-                                        Đang có có khách
-                                    </h3>
-                                    <button class="button btn-purchase">
-                                        Thanh toán
-                                    </button>
-                                    <button class="button btn-start">
-                                        Bắt đầu
-                                    </button>
-                                </div>
-                                <div class="room-cancel">
-                                    <button
+                                        onclick="handle_cancle(this)"
                                         class="button button-secondary btn-cancel"
                                     >
                                         Hủy phòng
@@ -180,13 +155,45 @@
                                     <button class="button btn-purchase">
                                         Thanh toán
                                     </button>
-                                    <button class="button btn-start">
+                                    <button class="button btn-start" onclick="handle_start(this)">
                                         Bắt đầu
                                     </button>
                                 </div>
                                 <div class="room-cancel">
                                     <button
-                                        class="button button-secondary btn-cancel"
+                                        class="button button-secondary btn-cancel" onclick="handle_cancle(this)"
+                                    >
+                                        Hủy phòng
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="room-card card-disabled">
+                                <div class="price">
+                                    <img
+                                        src="./assets/img/micro.png"
+                                        alt=""
+                                        width="100px"
+                                    />
+                                    <p class="text-bold">Giá: 50.000đ/h</p>
+                                </div>
+                                <div class="room-state">
+                                    <h3 class="customer-false">
+                                        Chưa có khách
+                                    </h3>
+                                    <h3 class="customer-true">
+                                        Đang có có khách
+                                    </h3>
+                                    <button class="button btn-purchase">
+                                        Thanh toán
+                                    </button>
+                                    <button class="button btn-start" onclick="handle_start(this)">
+                                        Bắt đầu
+                                    </button>
+                                </div>
+                                <div class="room-cancel">
+                                    <button
+                                        class="button button-secondary btn-cancel" onclick="handle_cancle(this)"
                                     >
                                         Hủy phòng
                                     </button>
@@ -300,5 +307,8 @@
                 </div>
             </div>
         </div>
+        <script src="./active.js">
+
+        </script>
     </body>
 </html>
