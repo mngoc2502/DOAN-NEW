@@ -24,23 +24,23 @@
             <div class="navbar">
                 <ul class="nav-list">
                     <li class="list-item">
-                        <a href="./tongquan.html" class="list-item-link"
+                        <a href="./tongquan.php" class="list-item-link"
                             >Tổng quan</a
                         >
                     </li>
                     <li class="list-item">
-                        <a href="./nhanvien.html" class="list-item-link"
+                        <a href="./nhanvien.php" class="list-item-link"
                             >Nhân viên</a
                         >
                         
                     </li>
                     <li class="list-item">
-                        <a href="./phonghat.html" class="list-item-link"
+                        <a href="./phonghat.php" class="list-item-link"
                             >Quản lí phòng hát</a
                         >
                     </li>
                     <li class="list-item">
-                        <a href="./thongke.html" class="list-item-link"
+                        <a href="./thongke.php" class="list-item-link"
                             >Thống kê</a
                         >
                     </li>
@@ -48,7 +48,7 @@
                 <ul class="nav-list">
                     <li class="list-item">
                         <a
-                            href=""
+                            href="./logout.php"
                             class="list-item-link d-flex align-item-center"
                             >Đăng xuất
                             <i class="fa-solid fa-right-from-bracket p-2"></i>
