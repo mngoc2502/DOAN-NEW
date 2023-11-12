@@ -111,9 +111,9 @@ ul {
     background-color: red !important;
 }
 
-input[type="file"] {
+/* input[type="file"] {
     display: none;
-}
+} */
 
 .body-room-right {
     display: flex;
