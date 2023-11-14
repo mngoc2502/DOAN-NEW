@@ -14,7 +14,10 @@ ul {
 .d-flex {
     display: flex;
 }
-
+tbody{
+    height: 150px;
+    overflow: scroll;
+}
 .align-item-center {
     align-items: center;
 }
