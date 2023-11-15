@@ -1,78 +1,56 @@
-const bntController = document.querySelector('.btn-controller');
+const bntController = document.querySelector(".btn-controller");
 const btnAdd = document.querySelector(".btn-add");
 const btnCancelAdd = document.querySelector(".btn-cancel_add");
 const btnSave = document.querySelector(".btn-save");
-const btnUpload = document.querySelector(".btn-upload");
-const bodyRoom = document.querySelector(".food-table");
-const table = bodyRoom.querySelector("table tbody");
-const tableHeading = bodyRoom.querySelector(".table-heading");
+const dataField = document.querySelector(".data-field");
+
+
 
 btnAdd.onclick = () => {
-    var newRow = `
-    <tr>
-        <td>
-            <input type="text" name="" class="input">
-        </td>
-        <td>
-            <input type="text" name="" class="input">
-        </td>
-        <td>
-            <input type="text" name="" class="input">
-        </td>
-        <td>
-            <input type="text" name="" class="input">
-        </td>
-        <td>
-            <input type="text" name="" class="input">
-        </td>
-        <td>
-            <input type="text" name="" class="input">
-        </td>
-
-        <td class="handle-process">
-            <button class="button btn-edit">
-                <i class="fa-solid fa-pen-to-square"></i>
-            </button>
-            <button class="button btn-del disable">
-                <i class="fa-solid fa-trash"></i>
-            </button>
-        </td>
-    </tr>
-    `;
-
-    tableHeading.insertAdjacentHTML("afterend", newRow);
-
+    dataField.classList.remove("d-none");
     btnAdd.classList.add("d-none");
     btnSave.classList.remove("d-none");
     btnCancelAdd.classList.remove("d-none");
 };
 
-btnCancelAdd.onclick = () => {
-    var secondChild = table.children[1];
-    if (secondChild) {
-        table.removeChild(secondChild);
-    }
-
-    btnAdd.classList.remove("d-none");
-    btnSave.classList.add("d-none");
-    btnCancelAdd.classList.add("d-none");
-};
-
 btnSave.onclick = () => {
+    addRow();
+    dataField.classList.add("d-none");
+    btnAdd.classList.remove("d-none");
+    btnSave.classList.add("d-none");
+    btnCancelAdd.classList.add("d-none");
+    location.reload();
+};
+
+btnCancelAdd.onclick = () => {
+    var inputValue = dataField.querySelectorAll('input');
+    inputValue.forEach(value => {
+        value.value ="";
+    });
+    dataField.classList.add("d-none");
     btnAdd.classList.remove("d-none");
     btnSave.classList.add("d-none");
     btnCancelAdd.classList.add("d-none");
 };
-btnUpload.onclick = () => {
-    var fileInput = document.createElement("input");
-    fileInput.type = "file";
-    fileInput.multiple = false;
-    fileInput.directory = true;
 
-    fileInput.addEventListener("change", function (event) {
-        var folderPath = event.target.files[0].path;
-
-        alert("Đã chọn thư mục:", folderPath);
-        document.body.removeChild(fileInput);
+function addRow() {
+    var inputValue = dataField.querySelectorAll('input');
+    var arrValue = [];
+    
+    inputValue.forEach(value => {
+        arrValue.push(value.value);
     });
-};
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "tongquan.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            console.log(xhr.responseText);
+        }
+    };
+
+    var data = "arrValue=" + JSON.stringify(arrValue);
+
+    xhr.send(data);
+}
