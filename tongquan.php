@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
 <body>
@@ -58,110 +57,7 @@
                     <div class="head-room-left">
                         <h3 class="text-header">phòng hát</h3>
                     </div>
-                    <div class="body-room-left">
-                        <div class="room-card card-disabled">
-                            <div class="price">
-                                <img src="./assets/img/micro.png" alt="" width="100px" />
-                                <p class="text-bold">Giá: 50.000đ/h</p>
-                            </div>
-                            <div class="room-state">
-                                <h3 class="customer-false">
-                                    Chưa có khách
-                                </h3>
-                                <h3 class="customer-true">
-                                    Đang có có khách
-                                </h3>
-                                <button class="button btn-purchase">
-                                    Thanh toán
-                                </button>
-                                <button onclick="handle_start(this)" class="button btn-start">
-                                    Bắt đầu
-                                </button>
-                            </div>
-                            <div class="room-cancel">
-                                <button onclick="handle_cancle(this)" class="button button-secondary btn-cancel">
-                                    Hủy phòng
-                                </button>
-                            </div>
-                        </div>
-                        <div class="room-card card-disabled">
-                            <div class="price">
-                                <img src="./assets/img/micro.png" alt="" width="100px" />
-                                <p class="text-bold">Giá: 50.000đ/h</p>
-                            </div>
-                            <div class="room-state">
-                                <h3 class="customer-false">
-                                    Chưa có khách
-                                </h3>
-                                <h3 class="customer-true">
-                                    Đang có có khách
-                                </h3>
-                                <button class="button btn-purchase">
-                                    Thanh toán
-                                </button>
-                                <button onclick="handle_start(this)" class="button btn-start">
-                                    Bắt đầu
-                                </button>
-                            </div>
-                            <div class="room-cancel">
-                                <button onclick="handle_cancle(this)" class="button button-secondary btn-cancel">
-                                    Hủy phòng
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="room-card card-disabled">
-                            <div class="price">
-                                <img src="./assets/img/micro.png" alt="" width="100px" />
-                                <p class="text-bold">Giá: 50.000đ/h</p>
-                            </div>
-                            <div class="room-state">
-                                <h3 class="customer-false">
-                                    Chưa có khách
-                                </h3>
-                                <h3 class="customer-true">
-                                    Đang có có khách
-                                </h3>
-                                <button class="button btn-purchase">
-                                    Thanh toán
-                                </button>
-                                <button class="button btn-start" onclick="handle_start(this)">
-                                    Bắt đầu
-                                </button>
-                            </div>
-                            <div class="room-cancel">
-                                <button class="button button-secondary btn-cancel" onclick="handle_cancle(this)">
-                                    Hủy phòng
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="room-card card-disabled">
-                            <div class="price">
-                                <img src="./assets/img/micro.png" alt="" width="100px" />
-                                <p class="text-bold">Giá: 50.000đ/h</p>
-                            </div>
-                            <div class="room-state">
-                                <h3 class="customer-false">
-                                    Chưa có khách
-                                </h3>
-                                <h3 class="customer-true">
-                                    Đang có có khách
-                                </h3>
-                                <button class="button btn-purchase">
-                                    Thanh toán
-                                </button>
-                                <button class="button btn-start" onclick="handle_start(this)">
-                                    Bắt đầu
-                                </button>
-                            </div>
-                            <div class="room-cancel">
-                                <button class="button button-secondary btn-cancel" onclick="handle_cancle(this)">
-                                    Hủy phòng
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="body-room-left"></div>
                 </div>
                 <div class="room-right">
                     <div class="head-room-right">

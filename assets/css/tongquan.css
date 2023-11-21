@@ -113,10 +113,10 @@ tbody{
 .btn-cancel_add{
     background-color: red !important;
 }
-
-/* input[type="file"] {
-    display: none;
-} */
+.food-table{
+    max-height: 800px;
+    overflow: auto;
+}
 
 .body-room-right {
     display: flex;
@@ -158,6 +158,10 @@ tbody{
     align-items: end;
 }
 
+.timer{
+    display: none;
+}
+
 .card-disabled {
     background-color: #e3a287;
 }
@@ -176,6 +180,15 @@ tbody{
 
 .card-active {
     background-color: #6ad78f;
+}
+
+.card-active .timer{
+    display: block;
+    text-align: center;
+}
+
+.card-active .text-price{
+    display: none;
 }
 
 .card-active .btn-start {
