@@ -58,7 +58,7 @@ room.innerHTML = roomInfo
                 <h3 class="customer-true">
                     Đang có có khách
                 </h3>
-                <button class="button btn-purchase" onclick="handle_cancle(this)">
+                <button class="button btn-purchase" onclick="handle_payment(this)" roomId = "${info.id}">
                     Thanh toán
                 </button>
                 <button class="button btn-start" onclick="handle_start(this)" roomId = "${info.id}">
@@ -66,7 +66,7 @@ room.innerHTML = roomInfo
                 </button>
             </div>
             <div class="room-cancel">
-                <butto" class="button button-secondary btn-cancel" onclick ="handle_cancle(this)" roomId = "${info.id}">
+                <butto" class="button button-secondary btn-cancel">
                     Hủy phòng
                 </button>
             </div>
@@ -118,6 +118,6 @@ function handle_payment(clickedButton) {
     document.getElementById(`time-${roomId}`).innerText = "00:00:00";
 }
 
-function handle_cancle(clickedButton){
-    confirm("Bạn có muốn hủy phòng không ?", "THÔNG BÁO")
-}
+// function handle_cancle(clickedButton){
+//     confirm("Bạn có muốn hủy phòng không ?", "THÔNG BÁO")
+// }
