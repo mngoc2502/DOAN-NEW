@@ -30,7 +30,7 @@
                     <a href="./tongquan.php" class="list-item-link">Tổng quan</a>
                 </li>
                 <li class="list-item">
-                    <a href="./nhanvien.php" class="list-item-link">Nhân viên</a>
+                    <a href="./nhanvien.php" class="list-item-link">Lịch làm</a>
 
                 </li>
                 <li class="list-item">
@@ -71,45 +71,9 @@
                                 <th>Giá tiền</th>
                                 <th>Thao tác</th>
                             </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Phòng 1</td>
-                                <td>250</td>
-                                <td class="handle-process text-center">
-                                    <button class="button btn-edit">
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                    </button>
-                                    <button class="button btn-del">
-                                        <i class="fa-solid fa-trash"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Phòng 1</td>
-                                <td>250</td>
-                                <td class="handle-process text-center">
-                                    <button class="button btn-edit">
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                    </button>
-                                    <button class="button btn-del">
-                                        <i class="fa-solid fa-trash"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Phòng 1</td>
-                                <td>250</td>
-                                <td class="handle-process text-center">
-                                    <button class="button btn-edit">
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                    </button>
-                                    <button class="button btn-del">
-                                        <i class="fa-solid fa-trash"></i>
-                                    </button>
-                                </td>
-                            </tr>
+                            <?php
+                                include './handleRoomChange.php'
+                            ?>
                         </table>
                     </div>
                 </div>

@@ -40,7 +40,7 @@
                     </li>
                     <li class="list-item">
                         <a href="./nhanvien.php" class="list-item-link"
-                            >Nhân viên</a
+                            >Lịch làm</a
                         >
                     </li>
                     <li class="list-item">
@@ -83,13 +83,9 @@
                             <th>Tổng số giờ cho thuê</th>
                             <th>Tổng</th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Phòng 1</td>
-                            <td>50.000</td>
-                            <td>250</td>
-                            <td>250</td>
-                        </tr>
+                        <?php
+                            include './loadRoom.php'
+                        ?>
                     </table>
                 </div>
         
@@ -101,18 +97,11 @@
                             <th>Số giờ làm</th>
                             <th>Lương/giờ</th>
                             <th>Số ngày nghỉ</th>
-                            <th>Thưởng</th>
                             <th>Lương nhận</th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Tên sản phẩm</td>
-                            <td>Tổng số lượng</td>
-                            <td>250</td>
-                            <td>2</td>
-                            <td>100.000</td>
-                            <td>250</td>
-                        </tr>
+                        <?php
+                            include './loadStaff.php'
+                        ?>
                     </table>
                 </div>
         
@@ -127,15 +116,9 @@
                             <th>Giá bán</th>
                             <th>Tổng tiền</th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Tên sản phẩm</td>
-                            <td>Tổng số lượng</td>
-                            <td>250</td>
-                            <td>250</td>
-                            <td>250</td>
-                            <td>250</td>
-                        </tr>
+                        <?php
+                            include './loadFood.php';
+                        ?>
                     </table>
                 </div>
             </div>

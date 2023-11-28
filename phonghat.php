@@ -35,7 +35,7 @@
                 </li>
                 <li class="list-item">
                     <a href="./nhanvien.php" class="list-item-link"
-                        >Nhân viên</a
+                        >Lịch làm</a
                     >
                 </li>
                 <li class="list-item">

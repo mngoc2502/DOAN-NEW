@@ -40,7 +40,7 @@
                     </li>
                     <li class="list-item">
                         <a href="./nhanvien.php" class="list-item-link"
-                            >Nhân viên</a
+                            >Lịch làm</a
                         >
                     </li>
                     <li class="list-item">
@@ -67,101 +67,9 @@
             </div>
         </header>
         <div class="container">
-            <div class="tab-container">
-                <div class="tab">
-                    <button class="tablinks" onclick="openTab(event, 'thu2')">Thứ 2</button>
-                    <button class="tablinks" onclick="openTab(event, 'thu3')">Thứ 3</button>
-                    <button class="tablinks" onclick="openTab(event, 'thu4')">Thứ 4</button>
-                    <button class="tablinks" onclick="openTab(event, 'thu5')">Thứ 5</button>
-                    <button class="tablinks" onclick="openTab(event, 'thu6')">Thứ 6</button>
-                    <button class="tablinks" onclick="openTab(event, 'thu7')">Thứ 7</button>
-                    <button class="tablinks" onclick="openTab(event, 'chuNhat')">Chủ nhật</button>
-                </div>
-                
-                <div id="thu2" class="tabcontent">
-                    <table>
-                        <tr>
-                            <th>Ca làm</th>  
-                            <th>Nhân viên 1</th>   
-                            <th>Nhân viên 2</th>
-                            <th>Nhân viên 3</th>
-                            <th>Nhân viên 4</th>                   
-                        </tr>
-                        <tr>
-                            <td>Ca 1</td>
-                            <td>X</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Ca 2</td>
-                            <td></td>
-                            <td></td>
-                            <td>X</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Ca 3</td>
-                            <td></td>
-                            <td>X</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                           
-                        </tr>
-                    </table>
-                </div>
-        
-                <div id="nhanVien" class="tabcontent">
-                    <table>
-                        <tr>
-                            <th>STT</th>
-                            <th>Tên nhân viên</th>
-                            <th>Số giờ làm</th>
-                            <th>Lương/giờ</th>
-                            <th>Số ngày nghỉ</th>
-                            <th>Thưởng</th>
-                            <th>Lương nhận</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Tên sản phẩm</td>
-                            <td>Tổng số lượng</td>
-                            <td>250</td>
-                            <td>2</td>
-                            <td>100.000</td>
-                            <td>250</td>
-                        </tr>
-                    </table>
-                </div>
-        
-                <div id="thucAn" class="tabcontent">
-                    <table>
-                        <tr>
-                            <th>STT</th>
-                            <th>Tên sản phẩm</th>
-                            <th>Tổng số lượng</th>
-                            <th>Tổng đã bán</th>
-                            <th>Tổng còn lại</th>
-                            <th>Giá bán</th>
-                            <th>Tổng tiền</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Tên sản phẩm</td>
-                            <td>Tổng số lượng</td>
-                            <td>250</td>
-                            <td>250</td>
-                            <td>250</td>
-                            <td>250</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+            <h1>Lịch làm việc</h1>
+            <iframe src="https://script.google.com/macros/s/AKfycbyenqQ3ioBjcWnzk8aY8ESYXLM_n8LQrftSi94KA1z6AVSKgbDH-H40BPRNXlMyo1JSbQ/exec" width = "100%" height="500px" frameBorder="0"></iframe>
         </div>
-        <iframe src="https://script.google.com/macros/s/AKfycbyenqQ3ioBjcWnzk8aY8ESYXLM_n8LQrftSi94KA1z6AVSKgbDH-H40BPRNXlMyo1JSbQ/exec" width = "100%" height="500px" frameBorder="0"></iframe>
     </body>
     <script src="./nhanvien.js"></script>
     <script src="./loadContent_nhanvien.js"></script>
