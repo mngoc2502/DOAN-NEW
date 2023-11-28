@@ -63,18 +63,20 @@
                     <div class="head-room-right">
                         <h3 class="text-header">Danh sách phòng</h3>
                     </div>
-                    <div class="body-room-right">
-                        <table id="table-food">
-                            <tr>
-                                <th>STT</th>
-                                <th>Tên phòng</th>
-                                <th>Giá tiền</th>
-                                <th>Thao tác</th>
-                            </tr>
-                            <?php
-                                include './handleRoomChange.php'
-                            ?>
-                        </table>
+                    <div class="height-overflow">
+                        <div class="body-room-right">
+                            <table id="table-food">
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tên phòng</th>
+                                    <th>Giá tiền</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                                <?php
+                                    include './handleRoomChange.php'
+                                ?>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -141,6 +143,7 @@
     <script src="./deleteRow.js"></script>
     <script src="./active.js"></script>
     <script src="./addItem.js"></script>
+    <script src="./updateRow.js"></script>
 </body>
 
 </html>

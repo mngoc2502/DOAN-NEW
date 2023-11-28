@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_row'])) {
     echo json_encode(['success' => true]);
     exit();
 }
-$sql = "SELECT * FROM room LIMIT 4";
+$sql = "SELECT * FROM room";
 
 $result = mysqli_query($conn, $sql);
 

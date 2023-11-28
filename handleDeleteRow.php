@@ -27,6 +27,9 @@ while ($row = mysqli_fetch_array($result)) {
     echo '<button class="button btn-edit">';
     echo '<i class="fa-solid fa-pen-to-square"></i>';
     echo '</button>';
+    echo '<button class="button btn-save d-none">';
+    echo '<i class="fa-regular fa-floppy-disk"></i>';
+    echo '</button>';
     echo '<button class="button btn-del disable" onclick="deleteRow(\'' . $row['food_code'] . '\')">';
     echo '<i class="fa-solid fa-trash"></i>';
     echo '</button>';

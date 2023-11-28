@@ -87,6 +87,10 @@ tbody{
     flex: 3;
 }
 
+.height-overflow{
+    max-height: 382px;
+    overflow: auto;
+}
 
 .head-room-right {
     padding: 0 20px;
