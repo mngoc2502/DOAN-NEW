@@ -22,7 +22,7 @@ while ($row = mysqli_fetch_array($result)) {
     echo '<td>' . $row['quantity'] . '</td>';
     echo '<td>' . $row['quantity_sold'] . '</td>';
     echo '<td>' . $row['quantity_remain'] . '</td>';
-    echo '<td>' . $row['price'] . '</td>';
+    echo '<td>' . number_format($row['price']) . ' VND</td>';
     echo '<td class="handle-process">';
     echo '<button class="button btn-edit">';
     echo '<i class="fa-solid fa-pen-to-square"></i>';

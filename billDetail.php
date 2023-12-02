@@ -19,33 +19,41 @@
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 echo '<div class="container-sm">';
-                echo '<h3>CHI TIẾT HÓA ĐƠN PHÒNG '.$row['room_id'].'</h3>';
+                echo '<h3 style="margin-top: 40px" >CHI TIẾT HÓA ĐƠN PHÒNG '.$row['room_id'].'</h3>';
                 echo '<p>Hóa đơn ngày: '.$row['bill_date'].'</p>';
                 echo '<p>Thời gian thuê: '.$row['start_time'].'</p>';
                 echo '<p>Thời gian trả phòng: '.$row['end_time'].'</p>';
+                echo '<p>Tổng thời gian thuê phòng: '. $row['total_hours'] .' giờ</p>';
                 echo '<table class="table table-striped table-hover">
                         <tr>
-                            <th>Sản phẩm</th>
-                        </tr>
-                        <tr>
-                            <th>STT</th>
-                            <th>Sản phẩm</th>
-                            <th>Số lượng</th>
-                            <th>Giá</th>
-                            <th>Thành tiền</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Tra chanh</td>
-                            <td>4</td>
-                            <td>11.000đ</td>
-                            <td>44.000đ</td>
-                        </tr>
-                        <tr>
-                            <th colspan="4" class="text-end">Tổng</th>
-                            <td>44.000đ</td>
-                        </tr>
-                    </table>';
+                        <th>Sản phẩm</th>
+                        </tr>';
+                echo '<tr>';
+                echo '<th>STT</th>';
+                echo '<th>Sản phẩm</th>';
+                echo '<th>Số lượng</th>';
+                echo '<th>Giá</th>';
+                echo '<th>Thành tiền</th>';
+                echo '</tr>';
+                $query1 = "SELECT * FROM bill_details WHERE bill_id = '$billId'";
+                $result1 = mysqli_query($conn, $query1);
+                if(mysqli_num_rows($result1) > 0){
+                    while($row1 = mysqli_fetch_assoc($result1)){
+                           echo '<tr>';
+                                echo '<td>'.$row1['detail_id'].'</td>';
+                                echo '<td>'.$row1['food_name'] .'</td>';
+                                echo '<td>'.$row1['quantity'].'</td>';
+                                echo '<td>'.$row1['price'].'VNĐ</td>';
+                                $total_price = $total_price + $row1['price'];
+                                echo '<td>'.$row1['price']*$row1['quantity'].' VNĐ</td>';
+                            echo '</tr>';
+                        }
+                    }
+                    echo '<tr>';
+                        echo '<th colspan="4" class="text-end">Tổng</th>';
+                        echo '<td>'. $total_price .' VNĐ</td>';
+                    echo '</tr>';
+                echo '</table>';
                 echo '</div>';
             }
         }
