@@ -59,7 +59,7 @@
                     </div>
                     <div class="body-room-left"></div>
                 </div>
-                <div class="room-right">
+                <!-- <div class="room-right">
                     <div class="head-room-right">
                         <h3 class="text-header">Danh sách phòng</h3>
                     </div>
@@ -72,13 +72,11 @@
                                     <th>Giá tiền</th>
                                     <th>Thao tác</th>
                                 </tr>
-                                <?php
-                                    include './handleRoomChange.php'
-                                ?>
+                                
                             </table>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="food">
                 <div class="table-food">

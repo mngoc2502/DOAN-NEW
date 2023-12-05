@@ -15,6 +15,14 @@ const intervalIds = [
     {
         id:4,
         intervalId: ""
+    },
+    {
+        id:5,
+        intervalId: ""
+    },
+    {
+        id:6,
+        intervalId: ""
     }
 ];
 const roomInfo = [
@@ -38,6 +46,16 @@ const roomInfo = [
         price: "50.000đ",
         time: "00:00:00",
     },
+    {
+        id: 5,
+        price: "50.000đ",
+        time: "00:00:00",
+    },
+    {
+        id: 6,
+        price: "50.000đ",
+        time: "00:00:00",
+    }
 ];
 
 room.innerHTML = roomInfo
@@ -66,7 +84,7 @@ room.innerHTML = roomInfo
                 </button>
             </div>
             <div class="room-cancel">
-                <butto" class="button button-secondary btn-cancel">
+                <button class="button button-secondary btn-cancel" onclick="handle_cancle(this)" roomId = "${info.id}">
                     Hủy phòng
                 </button>
             </div>
@@ -112,12 +130,29 @@ function handle_payment(clickedButton) {
     var roomId = clickedButton.getAttribute("roomId");
     roomCard.classList.remove("card-active");
     roomCard.classList.add("card-disabled");
-
-    alert(roomInfo[roomId-1].time);
     clearInterval(intervalIds[roomId-1].intervalId)
     document.getElementById(`time-${roomId}`).innerText = "00:00:00";
+    
+    const inforoom = roomInfo[roomId-1].time;
+    
+    var rentedTime = roomInfo[roomId - 1].time;
+    var [hours, minutes, seconds] = rentedTime.split(":").map(Number);
+
+    var totalHours = hours + minutes / 60 + seconds / 3600;
+    totalHours = totalHours.toFixed(4);
+    window.location.href = `thanhtoan.php?inforoom=${encodeURIComponent(inforoom)}&roomId=${roomId}&totalHours=${totalHours}`;
+
 }
 
-// function handle_cancle(clickedButton){
-//     confirm("Bạn có muốn hủy phòng không ?", "THÔNG BÁO")
-// }
+function handle_cancle(clickedButton){
+    const confirm = window.confirm("Bạn có muốn hủy phòng không ?", "THÔNG BÁO");
+
+    if(confirm){
+        var roomCard = clickedButton.closest(".room-card");
+        var roomId = clickedButton.getAttribute("roomId");
+        roomCard.classList.remove("card-active");
+        roomCard.classList.add("card-disabled");
+        clearInterval(intervalIds[roomId-1].intervalId)
+        document.getElementById(`time-${roomId}`).innerText = "00:00:00";
+    }
+}

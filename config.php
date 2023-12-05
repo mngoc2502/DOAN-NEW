@@ -1,1 +1,1 @@
-<?php $conn = new mysqli("localhost:3308","root","","karaoke");?>
+<?php $conn = new mysqli("localhost:3306","root","","karaoke");?>

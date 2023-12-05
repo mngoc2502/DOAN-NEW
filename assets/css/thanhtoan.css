@@ -1,0 +1,89 @@
+body {
+    font-size: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 60px;
+    background-color: rgb(241, 181, 96);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.list-item-link {
+    padding: 20px 20px;
+}
+
+.list-item-link:hover {
+    background: rgb(236, 229, 219);
+}
+
+.title-page {
+    padding-top: 30px;
+}
+
+/* container */
+.container-payment{
+    display: grid;
+    grid-template-columns: 70% auto;
+    column-gap: 30px;
+    padding: 30px;
+}
+.table-box{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    padding: 10px; 
+}
+.bill-box{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    padding: 10px
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04aa6d;
+    color: white;
+}
+
+table td,
+table th {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+table tr:hover {background-color: #ddd;}
+
+.handle-process{
+    text-align: end;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.action-group{
+    margin-top: 10px;
+    text-align: right;
+}

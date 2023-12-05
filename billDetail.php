@@ -25,9 +25,9 @@
                 echo '<p>Thời gian trả phòng: '.$row['end_time'].'</p>';
                 echo '<p>Tổng thời gian thuê phòng: '. $row['total_hours'] .' giờ</p>';
                 echo '<table class="table table-striped table-hover">
-                        <tr>
-                        <th>Sản phẩm</th>
-                        </tr>';
+                    <tr>
+                    <th>Sản phẩm</th>
+                    </tr>';
                 echo '<tr>';
                 echo '<th>STT</th>';
                 echo '<th>Sản phẩm</th>';
@@ -38,6 +38,7 @@
                 $query1 = "SELECT * FROM bill_details WHERE bill_id = '$billId'";
                 $result1 = mysqli_query($conn, $query1);
                 if(mysqli_num_rows($result1) > 0){
+                    $total_price = 0;
                     while($row1 = mysqli_fetch_assoc($result1)){
                            echo '<tr>';
                                 echo '<td>'.$row1['detail_id'].'</td>';
@@ -46,7 +47,7 @@
                                 echo '<td>'.$row1['price'].'VNĐ</td>';
                                 $total_price = $total_price + $row1['price'];
                                 echo '<td>'.$row1['price']*$row1['quantity'].' VNĐ</td>';
-                            echo '</tr>';
+                            echo '</tr>';   
                         }
                     }
                     echo '<tr>';
