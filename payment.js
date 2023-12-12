@@ -23,3 +23,20 @@ function updateTotalPrice() {
     document.getElementById("total-bill").textContent = totalBill;
 
 }
+
+function clearAllInputs() {
+    const inputElements = document.querySelectorAll('input[type="number"]');
+    inputElements.forEach((input) => {
+        input.value = '';
+    });
+
+    const totalElements = document.querySelectorAll("#total");
+    totalElements.forEach(function(element) {
+        element.textContent = 0;
+    });
+    document.getElementById("total-bill").textContent = 0;
+    const totalPriceElements = document.querySelectorAll('#total-price');
+    totalPriceElements.forEach((totalPriceElement) => {
+        totalPriceElement.innerText = '0';
+    });
+}

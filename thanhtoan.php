@@ -91,7 +91,7 @@
                     </tr>
                 </table>
                 <div class="action-group">
-                    <button class="button">
+                    <button class="button" onclick="clearAllInputs()">
                         <span><i class="fa-solid fa-trash"></i></span>    
                         Xoá toàn bộ
                     </button>

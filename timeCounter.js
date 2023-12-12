@@ -5,6 +5,9 @@ let timer;
 
 function startTimer() {
     timer = setInterval(updateTimer, 1000);
+    localStorage.setItem("hours", hours);
+    localStorage.setItem("minutes", minutes);
+    localStorage.setItem("seconds", seconds);
 }
 
 function stopTimer() {
