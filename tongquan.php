@@ -98,7 +98,7 @@
                         <div class="body-room-right food-table">
                             <table>
                                 <tr class="table-heading">
-                                    <th>STT</th>
+                                    <th>Mã SP</th>
                                     <th>Tên sản phẩm</th>
                                     <th>Tổng số lượng</th>
                                     <th>Tổng đã bán</th>

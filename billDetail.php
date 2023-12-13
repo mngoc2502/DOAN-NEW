@@ -43,9 +43,9 @@
                            echo '<tr>';
                                 echo '<td>'.$row1['detail_id'].'</td>';
                                 echo '<td>'.$row1['food_name'] .'</td>';
-                                echo '<td>'.$row1['quantity'].'</td>';
-                                echo '<td>'.$row1['price'].'VNĐ</td>';
-                                $total_price = $total_price + $row1['price'];
+                                echo '<td>'.(int)$row1['quantity'].'</td>';
+                                echo '<td>'.(int)$row1['price'].'VNĐ</td>';
+                                $total_price = $total_price + $row1['price']*$row1['quantity'];
                                 echo '<td>'.$row1['price']*$row1['quantity'].' VNĐ</td>';
                             echo '</tr>';   
                         }

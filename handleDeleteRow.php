@@ -20,8 +20,10 @@ while ($row = mysqli_fetch_array($result)) {
     echo '<td>' . $row['food_code'] . '</td>';
     echo '<td>' . $row['food_name'] . '</td>';
     echo '<td>' . $row['quantity'] . '</td>';
-    echo '<td>' . $row['quantity_sold'] . '</td>';
-    echo '<td>' . $row['quantity_remain'] . '</td>';
+    echo '<td></td>';
+    echo '<td></td>';
+    // echo '<td>' . $row['quantity_sold'] . '</td>';
+    // echo '<td>' . $row['quantity_remain'] . '</td>';
     echo '<td>' . $row['price']. '</td>';
     echo '<td class="handle-process">';
     echo '<button class="button btn-edit">';

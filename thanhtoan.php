@@ -60,7 +60,7 @@
                 <h2 style="margin-bottom: 25px">Sản phẩm đã dùng</h2>
             </div>
             <div>
-            <table>
+            <table id="product-table">
                     <tr>
                         <th>STT</th>
                         <th>Tên sản phẩm</th>
@@ -79,7 +79,7 @@
                             echo '<td>' . $row_number . '</td>';
                             $row_number++;
                             echo '<td>' . $row['food_name'] . '</td>';
-                            echo '<td><input type="number" min = 0 style="padding: 5px" id="quantity">' . '</input></td>';
+                            echo '<td><input type="number" min = 0 style="padding: 5px" id="quantity" value="0">' . '</input></td>';
                             echo '<td id="price">' . $row['price'] . '</td>';
                             echo '<td id="total-price"> 0 </td>';
                             echo '</tr>';
@@ -108,7 +108,7 @@
             </div>
             <div class="body-box">
                 <h3>Thông tin thanh toán phòng <?php echo $roomId?></h3>
-                <table>
+                <table id="bill">
                     <tr>
                         <td>Tổng số giờ hát:</td>
                         <td align="right" id="time"><?php echo $inforoom?></td>
@@ -133,7 +133,7 @@
                     </tr>
                 </table>
                 <div class="action-group">
-                    <button class="button">
+                    <button class="button" onclick="print_Bill()">
                         <span ><i class="fa-solid fa-print"></i></span>
                         Xuất file
                     </button>

@@ -55,6 +55,8 @@
                 <button class="tab-room" onclick="activateTab(this, 2)">Phòng 2</button>
                 <button class="tab-room" onclick="activateTab(this, 3)">Phòng 3</button>
                 <button class="tab-room" onclick="activateTab(this, 4)">Phòng 4</button>
+                <button class="tab-room" onclick="activateTab(this, 5)">Phòng 5</button>
+                <button class="tab-room" onclick="activateTab(this, 6)">Phòng 6</button>
             </div>
             <table class="table-room table-room-1">
                 <tr>
@@ -152,6 +154,62 @@
                 include './config.php';
 
                 $query = "SELECT * FROM bill WHERE room_id = 4";
+                $result = mysqli_query($conn, $query);
+                if (mysqli_num_rows($result) > 0) {
+                    $total = 1;
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo '<tr class="row" onclick="redirectToDetailsPage(\'' . $row["bill_id"] . '\')">';
+                        echo '<td>' . $total . '</td>';
+                        echo '<td>' . $row["total_hours"] . '</td>';
+                        echo '<td>' . $row["start_time"] . '</td>';
+                        echo '<td>' . $row["end_time"] . '</td>';
+                        echo '<td>' . $row["total_cost"] . '</td>';
+                        echo '</tr>';
+                        $total++;
+                    }
+                }
+                ?>
+            </table>
+            <table class="table-room table-room-5 d-none">
+                <tr>
+                    <th>STT</th>
+                    <th>Giờ thuê</th>
+                    <th>Thời gian bắt đầu</th>
+                    <th>Thời gian kết thúc</th>
+                    <th>Thành tiền</th>
+                </tr>
+                <?php
+                include './config.php';
+
+                $query = "SELECT * FROM bill WHERE room_id = 5";
+                $result = mysqli_query($conn, $query);
+                if (mysqli_num_rows($result) > 0) {
+                    $total = 1;
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo '<tr class="row" onclick="redirectToDetailsPage(\'' . $row["bill_id"] . '\')">';
+                        echo '<td>' . $total . '</td>';
+                        echo '<td>' . $row["total_hours"] . '</td>';
+                        echo '<td>' . $row["start_time"] . '</td>';
+                        echo '<td>' . $row["end_time"] . '</td>';
+                        echo '<td>' . $row["total_cost"] . '</td>';
+                        echo '</tr>';
+                        $total++;
+                    }
+                }
+                ?>
+            </table>
+            <table class="table-room table-room-6 d-none">
+                <tr>
+                    <th>STT</th>
+                    <th>Giờ thuê</th>
+                    <th>Thời gian bắt đầu</th>
+                    <th>Thời gian kết thúc</th>
+                    <th>Thành tiền</th>
+                </tr>
+                <?php
+                include './config.php';
+
+                $query = "SELECT * FROM bill WHERE room_id = 6";
                 $result = mysqli_query($conn, $query);
                 if (mysqli_num_rows($result) > 0) {
                     $total = 1;
