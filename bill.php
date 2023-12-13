@@ -40,6 +40,7 @@
         });
         const total_bill = document.getElementById("total_bill");
         total_bill.textContent = billData.total_bill +" VND";
+        window.print();
     </script>
 </body>
 </html>
