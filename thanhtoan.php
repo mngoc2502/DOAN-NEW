@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Thanh toán</title>
+    <link rel="shortcut icon" href="./assets/img/micro-favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/thanhtoan.css">
     <link rel="stylesheet" href="./assets/css/tongquan.css">
@@ -87,7 +88,7 @@
                     ?>
                     <tr>
                         <td colspan="4" align="right">Tổng cộng:</td>
-                        <td id="total">0</td>
+                        <td id="total-food">0</td>
                     </tr>
                 </table>
                 <div class="action-group">
@@ -108,30 +109,32 @@
             </div>
             <div class="body-box">
                 <h3>Thông tin thanh toán phòng <?php echo $roomId?></h3>
-                <table id="bill">
-                    <tr>
-                        <td>Tổng số giờ hát:</td>
-                        <td align="right" id="time"><?php echo $inforoom?></td>
-                    </tr>
-                    <tr>
-                        <td>Giá phòng/h:</td>
-                        <td align="right">50000</td>
-                    </tr>
-                    <tr>
-                        <td>Tổng tiền hát:</td>
-                        <td align="right" id="price-time">
-                            <?php echo $totalHours * 50000;?>                          
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Tổng tiền thức ăn:</td>
-                        <td align="right" id="total"></td>
-                    </tr>
-                    <tr>
-                        <td>Tổng tiền:</td>
-                        <td align="right" id="total-bill"></td>
-                    </tr>
-                </table>
+                    <table id="bill">
+                        <tr>
+                            <td>Tổng số giờ hát:</td>
+                            <td align="right">
+                                <span id="time"><?php echo $inforoom?></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Giá phòng/h:</td>
+                            <td align="right">50000</td>
+                        </tr>
+                        <tr>
+                            <td>Tổng tiền hát:</td>
+                            <td align="right">
+                                <span id="price-time"><?php echo $totalHours * 50000;?></span>                   
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tổng tiền thức ăn:</td>
+                            <td align="right" id="total-food"></td>
+                        </tr>
+                        <tr>
+                            <td>Tổng tiền:</td>
+                            <td align="right" id="total-bill"></td>
+                        </tr>
+                    </table>
                 <div class="action-group">
                     <button class="button" onclick="print_Bill()">
                         <span ><i class="fa-solid fa-print"></i></span>

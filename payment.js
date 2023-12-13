@@ -13,7 +13,7 @@ function updateTotalPrice() {
         totalPrice += totalForRow;
     });
 
-    const totalElements = document.querySelectorAll("#total");
+    const totalElements = document.querySelectorAll("#total-food");
     totalElements.forEach(function(element) {
         element.textContent = totalPrice;
     });
@@ -26,11 +26,11 @@ function updateTotalPrice() {
 
 function clearAllInputs() {
     const inputElements = document.querySelectorAll('input[type="number"]');
-    inputElements.forEach((input) => {
+    inputElements.forEach((input) => {  
         input.value = '';
     });
 
-    const totalElements = document.querySelectorAll("#total");
+    const totalElements = document.querySelectorAll("#total-food");
     totalElements.forEach(function(element) {
         element.textContent = 0;
     });
@@ -48,11 +48,11 @@ function print_Bill() {
     }
 
     var rows = table.getElementsByTagName('tr');
-    var nonZeroRows = [];
+    var foodData = [];
 
     for (var i = 1; i < rows.length; i++) {
         var cells = rows[i].getElementsByTagName('td');
-        if (cells.length >= 5) { // Ensure there are enough cells in the row
+        if (cells.length >= 5) {
             var input = cells[2].querySelector('input');
             if (input) {
                 var quantity = parseInt(input.value);
@@ -64,11 +64,25 @@ function print_Bill() {
                         'price': cells[3].innerText,
                         'total_price': cells[4].innerText
                     };
-                    nonZeroRows.push(rowData);
+                    foodData.push(rowData);
                 }
             }
         }
     }
 
-    console.log(nonZeroRows);
+
+    const time = document.getElementById("time").textContent;
+    const price_time = document.getElementById("price-time").textContent;
+    const total_food = document.getElementById("total-food").textContent;
+    const total_bill = document.getElementById("total-bill").textContent;
+
+    var billData = {
+        'time': time,
+        'price_time': price_time,
+        'total_food': total_food,
+        'total_bill': total_bill
+    }
+    localStorage.setItem("foodData",JSON.stringify(foodData));
+    localStorage.setItem("billData",JSON.stringify(billData));
+    window.location.href = `bill.php`;
 }
