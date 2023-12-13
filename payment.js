@@ -84,5 +84,6 @@ function print_Bill() {
     }
     localStorage.setItem("foodData",JSON.stringify(foodData));
     localStorage.setItem("billData",JSON.stringify(billData));
-    window.location.href = `bill.php`;
+    window.open('bill.php', '_blank');
+    window.location.href = `tongquan.php`;
 }
