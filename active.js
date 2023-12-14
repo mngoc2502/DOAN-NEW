@@ -70,11 +70,12 @@ room.innerHTML = roomInfo
                 </p>
             </div>
             <div class="room-state">
+                <h3>Phòng ${info.id}</h3>
                 <h3 class="customer-false">
                     Chưa có khách
                 </h3>
                 <h3 class="customer-true">
-                    Đang có có khách
+                    Đang có khách
                 </h3>
                 <button class="button btn-purchase" onclick="handle_payment(this)" roomId = "${info.id}">
                     Thanh toán
